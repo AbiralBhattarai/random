@@ -3,20 +3,18 @@
 #include<math.h>
 #define PI 3.14
 float fc;
-float fp;
 float sp;
 int main(){
-	float p;
+	int p;
 	printf("enter  price of pen in paisa ; ");
-	scanf("%f",&p);
-		if(p >= 100){
-			fp = p / 100;
-			fc = fp;
-			printf("%f",fc);
-		}else{
-			fc = p / 100 ;
-			printf("%f",fc);
-		};
+	scanf("%d",&p);
+	int fr = p / 100;
+	int fp = p % 100;
+	if(fr > 0){
+		printf("cost of pen is %d rupees and %d paisa. ",fr,fp);
+	}else{
+		printf("cost of pen is %d paisa",fp);
+	}
 	return 0;
 	getch();
 }
